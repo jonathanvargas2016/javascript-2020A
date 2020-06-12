@@ -56,3 +56,38 @@ if("Jona"){
 }else{
     console.log('it is false')
 }
+//comparaciones con numeros
+console.log("\n**************************")
+if(-1){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
+
+if(0){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
+
+if(1){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
+//el cero es false, los valores positivos y negativos son true
+
+console.log('\n************************************');
+
+if(null){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
+
+
+if(undefined){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
