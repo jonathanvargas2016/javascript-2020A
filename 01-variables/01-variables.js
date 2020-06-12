@@ -35,3 +35,24 @@ console.log(typeof apellido)
 //existen 5 tipos de datos
 
 console.log(Number('asc'))
+
+
+//comparaciones
+if(apellido.length >1){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
+//cadenas vacias imprime false
+if(""){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
+//cadenas de texto imprime true
+
+if("Jona"){
+    console.log('it is true')
+}else{
+    console.log('it is false')
+}
