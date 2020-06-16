@@ -168,7 +168,7 @@ console.log('valores: ',Object.values(persona)) //obtener los valores
 
 
 //variables por valor;
-//--number, string,boolean, undefined
+//--> solo se da en estos casos number, string,boolean, undefined
 
 let edadJona = 23;
 let edadSanti = edadJona;
@@ -182,6 +182,8 @@ console.log(edadSanti)
 
 
 //variables por referencia !!!!
+//solo se da en con objetos, arreglos
+
 let rafael={
     nombre:"Rafel",
 }
