@@ -165,3 +165,49 @@ delete persona.name;
 Object.keys(persona) //obtener las llaver del objeto
 console.log('llaves:',Object.keys(persona))
 console.log('valores: ',Object.values(persona)) //obtener los valores
+
+
+//variables por valor;
+//--number, string,boolean, undefined
+
+let edadJona = 23;
+let edadSanti = edadJona;
+
+console.log(edadJona)
+console.log(edadSanti)
+
+edadJona = edadJona + 1
+console.log(edadJona)
+console.log(edadSanti)
+
+
+//variables por referencia !!!!
+let rafael={
+    nombre:"Rafel",
+}
+
+let lenin = rafael
+
+lenin.nombre = "lenin"
+
+console.log(rafael)
+console.log(lenin)
+
+//cuando se igualan objetos javascript se esta referenciando al mismo espacio de memoria.
+delete rafael.nombre
+console.log(rafael)
+console.log(lenin)
+
+
+let rafael2 = {
+    nombre:"Rafael",
+}
+console.log(rafael2)
+
+let lenin2 = Object.assign({},rafael)//clonar un objeto. le envio una llave vacio
+
+lenin2.nombre = "lenin"
+
+delete rafael2.nombre
+console.log(rafael2)
+console.log(lenin2)
