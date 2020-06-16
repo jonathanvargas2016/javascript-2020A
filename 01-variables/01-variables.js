@@ -109,7 +109,8 @@ const persona ={name:'Jonathan',
         calle_principal:'s33A',
         calle_secundaraia:'Oe14',
         casa:'Oe13-371'
-    }
+    },
+    mascotas:['cafir','tomas','joaquin'],
 }
 
 console.log('Nombre: ',persona.name)
@@ -129,3 +130,86 @@ console.log(ArregloNumeros[0].mascota)
 //pull. traer cambios del servidor
 //fetch. notificar si hay cambios en el servidor
 //merge. agregar los cambios q no hay localmente.
+
+
+//Acceder a las propiedades del objeto
+console.log(persona.mascotas)
+persona.name;
+persona.lastname;
+persona['name'];
+//modificar un valor dentro del objeto
+
+persona.name = 'Santiago';
+console.log(persona.name)
+persona['name']="Jonathan";
+console.log(persona)
+
+//crear una nueva propiedad dentro del objeto
+persona.sueldo; //undefined
+
+persona.sueldo = 1.2;
+console.log(persona.sueldo);
+
+console.log(Object.keys(persona))
+
+// "eliminar" cierta llave de objeto
+//poniendole undefined
+
+persona.name = undefined;
+
+//eliminar definitivamente llave nombre
+delete persona.name;
+
+//CLASE Object -> podenos hacer cosas utiles dentro de los objetos javascript
+
+Object.keys(persona) //obtener las llaver del objeto
+console.log('llaves:',Object.keys(persona))
+console.log('valores: ',Object.values(persona)) //obtener los valores
+
+
+//variables por valor;
+//--> solo se da en estos casos number, string,boolean, undefined
+
+let edadJona = 23;
+let edadSanti = edadJona;
+
+console.log(edadJona)
+console.log(edadSanti)
+
+edadJona = edadJona + 1
+console.log(edadJona)
+console.log(edadSanti)
+
+
+//variables por referencia !!!!
+//solo se da en con objetos, arreglos
+
+let rafael={
+    nombre:"Rafel",
+}
+
+let lenin = rafael
+
+lenin.nombre = "lenin"
+
+console.log(rafael)
+console.log(lenin)
+
+//cuando se igualan objetos javascript se esta referenciando al mismo espacio de memoria.
+delete rafael.nombre
+console.log(rafael)
+console.log(lenin)
+
+
+let rafael2 = {
+    nombre:"Rafael",
+}
+console.log(rafael2)
+
+let lenin2 = Object.assign({},rafael)//clonar un objeto. le envio una llave vacio
+
+lenin2.nombre = "lenin"
+
+delete rafael2.nombre
+console.log(rafael2)
+console.log(lenin2)
