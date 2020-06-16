@@ -109,7 +109,8 @@ const persona ={name:'Jonathan',
         calle_principal:'s33A',
         calle_secundaraia:'Oe14',
         casa:'Oe13-371'
-    }
+    },
+    mascotas:['cafir','tomas','joaquin'],
 }
 
 console.log('Nombre: ',persona.name)
@@ -129,3 +130,16 @@ console.log(ArregloNumeros[0].mascota)
 //pull. traer cambios del servidor
 //fetch. notificar si hay cambios en el servidor
 //merge. agregar los cambios q no hay localmente.
+
+
+//Acceder a las propiedades del objeto
+console.log(persona.mascotas)
+persona.name;
+persona.lastname;
+persona['name'];
+//modificar un valor dentro del objeto
+
+persona.name = 'Santiago';
+console.log(persona.name)
+persona['name']="Jonathan";
+console.log(persona)
