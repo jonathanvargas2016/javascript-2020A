@@ -143,3 +143,25 @@ persona.name = 'Santiago';
 console.log(persona.name)
 persona['name']="Jonathan";
 console.log(persona)
+
+//crear una nueva propiedad dentro del objeto
+persona.sueldo; //undefined
+
+persona.sueldo = 1.2;
+console.log(persona.sueldo);
+
+console.log(Object.keys(persona))
+
+// "eliminar" cierta llave de objeto
+//poniendole undefined
+
+persona.name = undefined;
+
+//eliminar definitivamente llave nombre
+delete persona.name;
+
+//CLASE Object -> podenos hacer cosas utiles dentro de los objetos javascript
+
+Object.keys(persona) //obtener las llaver del objeto
+console.log('llaves:',Object.keys(persona))
+console.log('valores: ',Object.values(persona)) //obtener los valores
