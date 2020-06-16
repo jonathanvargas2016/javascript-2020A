@@ -7,4 +7,4 @@ cualquierCosa = "hola"
 cualquierCosa = undefined
 cualquierCosa = null
 
-let arreglo 
+let arregloTodo = [1,2,3,"hola",true, {},[1,2,3]]
