@@ -147,3 +147,53 @@ console.log('respuestaFilter', respuestaFilter)
 // por cada consonante de la palabra del estudiante le vamos a regalar 0.05 decimas
 //
 // filtrar cuales personas pasaron mayores o iguales a 14
+
+
+//OR, alguna nota es menor a 4
+
+const respuestaSome = arreglo
+    .some((valorActual, indiceActual,arregloCompleto)=>{
+        return valorActual.nota < 4
+
+    })
+console.log('respuestaSome ', respuestaSome)
+
+//ANY
+//todas las notas son mayores a 14 ?
+
+const respuestaAny = arreglo
+    .every((valorActual,indiceActual, arregloCompleto)=>{
+        return valorActual.nota > 14
+
+    })
+
+console.log("respuestaAny ", respuestaAny)
+
+//reduce  izq -> der
+//reduceRight  der -> izq
+
+//reduce  recibe dos parametros
+
+const respuestaReduce = arreglo
+    .reduce((valorAcumulado,valorActual,indice,arreglo)=>{
+        return valorAcumulado - valorActual.nota
+      //return 500 - valorActual.nota
+    },
+    500 // acumulador
+)
+
+console.log("respuesta reduce", respuestaReduce)
+
+const arregloEstudiantesMenoresNueve = arreglo
+    .map((v)=>v.nota*1.3) //añadiendo el 30%
+    .filter((nota)=>nota < 9) //busco a los < 9
+
+const totalPuntosEstudiantes = arregloEstudiantesMenoresNueve
+    .reduce((acumulado, actual)=>acumulado+actual,0)
+
+const notaPromedio = totalPuntosEstudiantes / arregloEstudiantesMenoresNueve.length
+
+console.log('nota PROMEDIO ', notaPromedio)
+
+
+
