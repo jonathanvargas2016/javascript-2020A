@@ -1,7 +1,7 @@
 const arreglo = [
     {
         id:1,
-        nombre: 'Jonathan',
+        nombre: 'Adrian',
         nota: 5
     },
     {
@@ -21,7 +21,7 @@ const arreglo = [
     },
     {
         id:5,
-        nombre: 'Fernanda',
+        nombre: 'Andrea',
         nota: 19
     },
     {
@@ -37,18 +37,18 @@ const arreglo = [
     {
         id:8,
         nombre: 'Daniel',
-        nota: 19,
+        nota: 19
     },
     {
         id:9,
-        nombre: 'Alisson',
-        nota: 14,
+        nombre: 'Lilly',
+        nota: 14
     },
     {
         id:10,
         nombre: 'Ramiro',
-        nota: 12,
-    },
+        nota: 12
+    }
 ];
 
 console.log('*************************************************')
