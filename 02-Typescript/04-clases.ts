@@ -12,6 +12,7 @@ class Persona {
     }
 
     private mostrarNombreApellido(){
+
         return this.nombreApellido;
     }
 

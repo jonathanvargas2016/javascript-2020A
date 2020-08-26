@@ -1,0 +1,1 @@
+{"nombre":"Politecnico","direccion":"Av","telefono":"4516625","capacidad":100,"abiertoFinesDeSemana":true},{"nombre":"prueba","direccion":"chillogallo","telefono":"3033221","capacidad":"80","abiertoFinesDeSemana":false}
