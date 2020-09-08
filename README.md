@@ -67,7 +67,7 @@ $http://localhost:1337/Usuario?where{"id":{"<=":"4"}}
 ```
 
 
-
+Es importante dessuscribirse de todas las suscripciones. En el evento OnDestroy()--
 
 
 

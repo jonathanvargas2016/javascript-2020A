@@ -1,1 +1,74 @@
-<h1>Hola =)</h1>
+<h1>Lista Peliculas</h1>
+<hr>
+
+
+
+
+  <!-- directivas - NGFOR -->
+  <!-- <p *ngFor="let numero of arregloNumeros">
+    {{numero}}
+  </p> -->
+
+<!-- directiva - NGIF -->
+  <!-- <p *ngIf="false">
+    OCULTO
+  </p> -->
+
+<!-- <button type="button" name="button"
+        (click)='habilitado = !habilitado'>
+
+        {{habilitado? 'habilitado':'deshabilitado'}}
+
+</button>
+
+<app-carta-pelicula *ngIf="habilitado">
+</app-carta-pelicula> -->
+
+
+
+
+<!-- <div *ngFor="let pelicula of arregloPeliculas" *ngIf="habilitado">
+
+  <app-carta-pelicula [urlImagen]='pelicula.url'
+                      [descripcion]='pelicula.descripcion'
+                      [boton]='pelicula.nombrePelicula'
+                      (eventoDioClicEnBoton)="mensajeConsola($event)"
+                      (eventoDioClicEnImagen)='mensajeConsola($event)'>
+  </app-carta-pelicula> -->
+
+  <!-- <app-carta-pelicula urlImagen='https://images.clarin.com/2020/02/18/virus-the-flu-la-pelicula___mSDoa9Z5_600x338__1.jpg'
+                      descripcion='descripcion 2'
+                      boton='like 2'
+                      (eventoDioClicEnBoton)="mensajeConsola($event)">
+  </app-carta-pelicula> -->
+
+
+<!--
+</div> -->
+
+<!-- <button type="button"
+        (click)="creaUsuario()"
+        name="button">
+        Crear Usuario
+</button> -->
+
+
+<div *ngFor="let usuario of arregloUsuarios">
+  {{usuario.nombre}}
+
+</div>
+
+
+
+<ul>
+  <li>
+    <a [routerLink]="['inicio']">inicio</a>  
+  </li>
+
+  <li>
+    <a [routerLink]="['login']">login</a>
+  </li>
+
+</ul>
+
+<router-outlet></router-outlet >

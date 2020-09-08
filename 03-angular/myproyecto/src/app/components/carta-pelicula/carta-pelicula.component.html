@@ -1,0 +1,18 @@
+<p>carta-pelicula works!</p>
+
+<div class="container">
+
+
+<!-- concepto de {{}} se le conoce como INTERPOLACION -->
+<!-- Property binding para setear valores en propiedades como es SRC -->
+  <img [src]="urlImagen" alt="imagen pelicula" (click)='ejecutarEventoDioClicImagen()'>
+  <p>{{descripcion}}</p>
+  <a [href]="linkTextoEjemplo">Ver Mas</a>
+  <br>
+
+  <!-- event binding se le conoce cuando encierras a un evento con (click) -->
+  <button type="button"
+          name="button"
+          (click)="ejecutarEventoDioClic()"
+          (blur)="eventoOnBlur()">{{boton}}</button>
+</div>
