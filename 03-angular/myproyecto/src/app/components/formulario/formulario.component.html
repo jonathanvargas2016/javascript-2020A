@@ -1,0 +1,71 @@
+<p>formulario works!</p>
+
+
+<form #formularioUsuario= "ngForm" (ngSubmit)="crearUsuario(formularioUsuario)" >
+
+  <div>
+    <label for="nombreID">Nombre</label>
+    <input type="text"
+          id="nombreID"
+          name="nombre"
+          [(ngModel)]="nombreModelo"
+          required
+          minlength="3"
+          maxlength="10"
+          #nombreCampo="ngModel">
+
+          <div *ngIf="nombreCampo.touched && nombreCampo.errors">
+            <p *ngIf="nombreCampo.errors.required">Error</p>
+            <p *ngIf="nombreCampo.errors.minlength">Longitud Minima</p>
+          </div>
+
+  </div>
+  <div>
+    <label for="cedulaID">Cedula</label>
+    <input type="number"
+          id="cedulaID"
+          name="cedula"
+          [(ngModel)]="cedulaModelo"
+          required>
+  </div>
+
+
+  <div>
+    <label for="correoID">Correo</label>
+    <input type="email"
+          id="correoID"
+          name="correo"
+          [(ngModel)]="correoModelo"
+          required>
+  </div>
+
+  <div>
+    <label for="estadoCivilID">Estado Civil</label>
+    <select name="estadoCivil"
+            id="estadoCivilID"
+            [(ngModel)]="estadoCivilModelo"
+            required>
+      <option value="Soltero">E.S. Soltero</option>
+      <option value="Casado">E.S. Casado</option>
+      <option value="Divorciado">E.S. Divorciado</option>
+      <option value="Viudo">E.S. Viudo</option>
+      <option value="Unión libre">E.S. Union Libre</option>
+
+    </select>
+
+  </div>
+
+<button type="button" name="button" (click)="ayuda()">Ayuda</button>
+<button type="button">Buton</button>
+<button type="submit"  [disabled]="!formularioUsuario.form.valid">Submit</button>
+<button type="reset">Defecto</button>
+
+<!-- boton sin definir el type es de tipo submit -->
+<button>Defecto (Submit)</button>
+
+
+
+
+
+
+</form>

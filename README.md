@@ -70,9 +70,27 @@ $http://localhost:1337/Usuario?where{"id":{"<=":"4"}}
 Es importante dessuscribirse de todas las suscripciones. En el evento OnDestroy()--
 
 
+### Angular Material
+```
+$ng add @angular/material
+```
+PINK - yes - yes
 
+### Bootstrap  https://ng-bootstrap.github.io/#/components/modal/examples
 
+```
+$ng add @ng-bootstrap/ng-bootstrap
+```
 
+### PrimeNG   https://primefaces.org/primeng/showcase/#/setup
+
+```
+$npm install primeng primeicons --save
+```
+se agrega en angular.json
+"node_modules/primeicons/primeicons.css",
+"node_modules/primeng/resources/themes/saga-blue/theme.css",
+"node_modules/primeng/resources/primeng.min.css",
 
 
 

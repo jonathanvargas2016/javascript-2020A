@@ -1,5 +1,6 @@
 import { Component,OnInit, OnDestroy } from '@angular/core';
 import { UsuarioService } from './usuario.service';
+import { AuthService } from './servicios/auth/auth.services';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   arregloObservables = []
 
-  constructor(private _service:UsuarioService){
+  constructor(private _service:UsuarioService, public readonly _authService:AuthService){
 
 
   }

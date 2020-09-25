@@ -1,0 +1,24 @@
+
+<label for="busquedaId">Busqueda</label>
+<input type="text" name="busqueda" value="" id="busquedaId" [(ngModel)]="busquedaModelo">
+<button type="submit" name="button" (click)="filtrarArreglo()">Buscar</button>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Cedula</th>
+    <th>Correo</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let usuario of arregloUsuarios">
+    <td>{{usuario.id}}</td>
+    <td>{{usuario.nombre}}</td>
+    <td>{{usuario.cedula}}</td>
+    <td>{{usuario.correo}}</td>
+    <td>
+      <button (click)="irEditarUsuario(usuario.id)">Editar</button>
+      <button (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+    </td>
+  </tr>
+</table>

@@ -52,23 +52,33 @@
         Crear Usuario
 </button> -->
 
-
+<!--
 <div *ngFor="let usuario of arregloUsuarios">
   {{usuario.nombre}}
 
-</div>
+</div> -->
 
 
 
 <ul>
   <li>
-    <a [routerLink]="['inicio']">inicio</a>  
+    <a [routerLink]="['inicio']">inicio</a>
   </li>
 
   <li>
     <a [routerLink]="['login']">login</a>
   </li>
+  <li *ngIf="this._authService.estasAutenticado">
+    <a [routerLink]="['usuario']" >
+      Usuarios
+    </a>
+  </li>
 
 </ul>
+
+<!-- <button mat-button color="accent">Boton Material</button>
+<button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Cuidado con verme feo">Tooltip on top</button> -->
+
+<!-- <p-button label="hola desde priemng" class="p-button-secondary"></p-button> -->
 
 <router-outlet></router-outlet >

@@ -12,8 +12,9 @@ export class UsuarioService {
 
   constructor(private readonly _http:HttpClient) {  }
 
-  traerTodos(){
-    return this._http.get(this.url+'/usuario')
+  traerTodos(consulta?:string){
+
+    return this._http.get(this.url+'/usuario?'+consulta)
   }
 
   //POST /UsuarioService
@@ -23,6 +24,21 @@ export class UsuarioService {
       usuario // datos
     )
   }
+
+  editar(usuario,id){
+    return this._http.put(this.url+'/usuario/'+id,usuario)
+  }
+
+  obtenerUnoPorId(idUsuario:number){
+    return this._http.get(this.url+'/usuario/'+idUsuario)
+  }
+
+  eliminar(idUsuario:number){
+    return this._http.delete(this.url+'/usuario/'+idUsuario)
+  }
+
+
+
 
 
 
