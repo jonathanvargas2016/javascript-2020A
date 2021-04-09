@@ -1,0 +1,30 @@
+
+<!-- <p>{{usuario.nombre}}</p> solo asi me da un error de que no existe esto es debido a q la variable esta definida pero esta vacia entonces es necesario usar ?-->
+
+<!-- primera opcion -->
+<p>{{usuario?.id}}</p>
+<p>{{usuario?.nombre}}</p>
+<p>{{usuario?.cedula}}</p>
+
+
+<!-- segunda opcion -->
+<!--
+<div *ngIf="usuario">
+  <p>{{usuario.id}}</p>
+  <p>{{usuario.nombre}}</p>
+  <p>{{usuario.cedula}}</p>
+</div> -->
+
+
+<div *ngIf="mostrarFormulario">
+
+  <app-formulario [nombreInput]="usuario.nombre"
+                  [cedulaInput]="usuario.cedula"
+                  [estadoCivilInput]="usuario.estadoCivil"
+                  [correoInput]="usuario.correo"
+                  (informacionValidada)="editarUsuario($event)">
+
+
+  </app-formulario>
+
+</div>
