@@ -11,7 +11,7 @@ About SAILS: Sails.js es un marco de aplicación web Model-View-Controller desar
 lanzado como software gratuito y de código abierto bajo la licencia MIT. Está diseñado para facilitar la creación de API y 
 aplicaciones web Node.js personalizadas y de nivel empresarial.
 
-###intalacion de nuevo paquete para BACKEND
+intalacion de nuevo paquete para BACKEND
 https://sailsjs.com/documentation/concepts/models-and-orm/model-settings
 ```
 $npm install sails -g
